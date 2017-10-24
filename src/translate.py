@@ -121,7 +121,7 @@ def train():
     actions, FLAGS.seq_length_in, FLAGS.seq_length_out, FLAGS.data_dir, not FLAGS.omit_one_hot )
 
   # Limit TF to take a fraction of the GPU memory
-  gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.97)
+  gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.99)
   device_count = {"GPU": 0} if FLAGS.use_cpu else {"GPU": 1}
 
   with tf.Session(config=tf.ConfigProto( gpu_options=gpu_options, device_count = device_count )) as sess:
