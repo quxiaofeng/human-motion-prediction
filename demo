@@ -2,4 +2,4 @@ mkdir data && cd data && wget http://www.cs.stanford.edu/people/ashesh/h3.6m.zip
 pip install h5py glances[gpu]
 python src/translate.py --action walking --seq_length_out 25 --iterations 10000
 python src/translate.py --action walking --seq_length_out 25 --iterations 10000 --sample --load 10000
-
+python src/forward_kinematics.py
